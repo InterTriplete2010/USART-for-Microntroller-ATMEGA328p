@@ -25,8 +25,8 @@ void uart_init(unsigned int ubrr) {
 	//Now enable the receiver and the transmitter by setting RXEN0 and TXEN0 to 1 and the interrupts
 	UCSR0B |= (1 << RXCIE0) | (1 << TXCIE0) | (1 << RXEN0) | (1 << TXEN0);	
 	
-	//Now set frame format: 8 bit for the data + 1 stop bit to interface with arduino. Also, enable the interrupt for transmitter and receiver
-	UCSR0C |= (1 << RXC0) | (0<<USBS0) | (1<<UCSZ00) | (1<<UCSZ01);
+	//Now set frame format: 8 bit for the data + 1 stop bit to interface with arduino.
+	UCSR0C |= (1<<UCSZ00) | (1<<UCSZ01);
 
 }
 
