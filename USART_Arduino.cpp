@@ -7,12 +7,15 @@ void setup()
 
 void loop() {
 
- 
+Serial.write(66);
+
+  delay(1000)
+  
   if (Serial.available() > 0) 
   {
   
 
-     Serial.print("I received: ");
+     Serial.print(" - I received: ");
 
     Serial.println(Serial.read());
 
