@@ -86,7 +86,7 @@ ISR(USART_RX_vect)
 }
 
 //LED will be turned on when there is a change in PD7
-ISR(PCINT0_vect)
+ISR(PCINT2_vect)
 {
 	
 	PORTD |= (1 << PORTD6);
@@ -103,8 +103,8 @@ int main(void)
 	uart_init(MYUBRR);
 	
 	//Enable the interrupt for the change of pin in D6
-	PCICR |= (1 << PCIE0);
-	PCMSK0 |= (1 << PCINT0);
+	PCICR |= (1 << PCIE2);
+	PCMSK2 |= (1 << PCINT23);
 	
 	sei();	//Enable interrupts
 	int flag_data = 0;
