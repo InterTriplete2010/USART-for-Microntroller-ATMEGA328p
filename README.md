@@ -7,8 +7,8 @@ These two simple files are used to have two arduino UNO (Microchip: ATMEGA328p) 
 
 2) The file named "USART_ATMEL" is used to set the USART in the second arduino board (AB2). This code was written in Microchip Studio and was burnt into ATMEGA328p by using ATMEL ICE.
 
-AB1 will send the code "66" to AB2, that will read the code and will send it back to AB1. When data are received and sent by AB@, the interrupts will kick in, causing a LED connected to AB2 to flash every 500 ms (Port PD5). Also, when the circuit first starts, a LED connected to PD7 will be on and will be switched off after the fourth time that the message will be read and transmitted by AB2. At that point, a seocnd interrupt will kick in switching on a LED connected to PD6. 
+AB1 will send the code "66" to AB2, which will read the code and will send it back to AB1. When data are received and sent by AB2, the interrupts will kick in, causing a LED connected to AB2 to flash every 500 ms (Port PD5). Also, when the circuit first starts, a LED connected to PD7 will be on and will be switched off after the fourth time that the message will be read and transmitted by AB2. At that point, a seocnd interrupt will kick in switching on a LED connected to PD6. 
 
-I hope that this code can be useful to soemone.
+I hope that this code can be useful to someone.
 
 If you have any questions and/or want to report bugs, please e-mail me (Ale) at: pressalex@hotmail.com
