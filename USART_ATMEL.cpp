@@ -18,7 +18,7 @@
 //Define the USART
 void uart_init(unsigned int ubrr) {
 	
-	//Set the baud rate. This is a 12 bit register (pag 252)
+	//Set the baud rate. This is a 12 bit register 
 	UBRR0H = (unsigned char) (ubrr >> 8);	//It contains the 4 most significant bits
 	UBRR0L = (unsigned char)ubrr;	//It contains the 8 least significant bits
 
